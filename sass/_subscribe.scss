@@ -1,0 +1,587 @@
+footer {
+    width: 100%;
+    height: 900px;
+    background-image: url(../images/subscribe.png);
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+
+    .box {
+        @include regularWidth;
+        height: 650px;
+        background-color: $bgColor;
+      
+        
+        .subscribe{
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            border:2px solid $mainColor;
+            height: 100%;
+            text-align: center;
+            padding: 3.5rem 0;
+            display:flex;
+            align-items: center;
+            .contentP{
+                width: 76%;
+                font-size: 1.7rem;
+                margin:0 auto;
+                font-family: $source;
+                line-height: 40px;
+            }
+            h4{
+                @include forH4;
+            }
+            h2{
+                @include forH2;
+            }
+            form{
+                
+                width: 75%;
+                height:80px;
+               
+                border: 1px solid $mainColor;
+                background-color: $mainColor;
+                margin:0 auto;
+                padding: 0;
+                position: relative;
+                input{
+                    width: 84%;
+                    height: 100%;
+                    border:none;
+                    background-color: $bgColor;
+                    padding:0 1rem;
+                    font-size: 1.5rem;
+                    position: absolute;
+                    left:0;
+                   
+                   
+                    &::placeholder{
+                        font-size: 1rem;
+                        
+                        
+                    }
+                    
+                    &:focus{
+                        outline: 0;
+                        color:$mainColor;
+                        
+                      
+                       }
+                }
+                button{
+                    
+                    position: absolute;
+                    right: 0;
+                    width: 16%;
+                    height: 100%;
+                    border:none;
+                    background-color: $mainColor;
+                    border: 1px solid $mainColor;
+                    cursor: pointer;
+                    color:$bgColor;
+                    font-weight: $semibold;
+                    font-size: 1rem;
+                    text-align: center;
+                     
+
+                }
+            }
+
+            .social{
+                margin:2rem auto;
+                display: flex;
+                justify-content: space-between;
+                 
+                width: 50%;
+
+
+                a{
+                    background-color: $bgColor;
+                    border: 3px solid $mainColor;
+                    padding: 1.2rem;
+                    border-radius: 50%;
+                    color:$mainColor;
+                    font-size: 2rem;
+                  i{
+                    @include main_transition;
+                  }
+
+                  
+                }
+                a:hover{
+                    background-color: $mainColor;
+                    color:$bgColor;
+                    
+                    i{
+                        transform: scale(1.3);
+                    }
+                    
+    
+                }
+            }
+
+            p{
+                color:$wColor;
+                span{
+                    color:$mainColor;
+                }
+            }
+        }
+
+    }
+
+    @include breakpoint_xxl{
+        .box{
+            @include xxlWidth;
+
+                 
+        .subscribe{
+       
+
+            .contentP{
+                font-size: 1.4rem;
+               
+            }
+           
+            
+
+           
+        }
+        }
+    }
+   
+    @include breakpoint_xl{
+        .box{
+            @include xlWidth;
+            .subscribe{
+         
+                border:1.5px solid $mainColor;
+          
+    
+                .contentP{
+                    font-size: 1.4rem;
+                   
+                }
+                h4{
+                    @include forH4;
+                }
+                h2{
+                    @include forH2;
+                }
+              
+    
+                .social{
+                    margin:2rem auto;
+                    display: flex;
+                    justify-content: space-between;
+                     
+                    width: 50%;
+    
+    
+                    a{
+                        background-color: $bgColor;
+                        border: 2px solid $mainColor;
+                        padding: 1.1rem;
+                        border-radius: 50%;
+                        color:$mainColor;
+                        font-size: 1.8rem;
+                      i{
+                        @include main_transition;
+                      }
+    
+                      
+                    }
+                    a:hover{
+                        background-color: $mainColor;
+                        color:$bgColor;
+                        
+                        i{
+                            transform: scale(1.3);
+                        }
+                        
+        
+                    }
+                }
+    
+               
+            }
+       
+        }
+    }
+    @include breakpoint_lg{
+        .box{
+            @include lgWidth;
+            height: 700px;
+            .subscribe{
+         
+                border:1.5px solid $mainColor;
+                padding: 4.5rem 0;
+          
+    
+                .contentP{
+                    font-size: 1.2rem;
+                   
+                }
+                h4{
+                    @include forH4;
+                    font-size: 1.8rem;
+
+                }
+                h2{
+                    @include forH2;
+                    font-size: 2.5rem;
+                }
+                form{
+                
+                    width: 70%;
+                    height:80px;
+                   
+                    border: 1px solid $mainColor;
+                    background-color: $mainColor;
+                    margin:0 auto;
+                    padding: 0;
+                    position: relative;
+                    input{
+                        width: 80%;
+                        
+                    }
+                    button{
+                        
+                        position: absolute;
+                        right: 0;
+                        width: 20%;
+                      
+                         
+    
+                    }
+                }
+    
+                .social{
+                    margin:2rem auto;
+                    display: flex;
+                    justify-content: space-between;
+                     
+                    width: 50%;
+    
+    
+                    a{
+                        background-color: $bgColor;
+                        border: 2px solid $mainColor;
+                        padding: 1.1rem;
+                        border-radius: 50%;
+                        color:$mainColor;
+                        font-size: 1.8rem;
+                      i{
+                        @include main_transition;
+                      }
+    
+                      
+                    }
+                    a:hover{
+                        background-color: $mainColor;
+                        color:$bgColor;
+                        
+                        i{
+                            transform: scale(1.3);
+                        }
+                        
+        
+                    }
+                }
+                p{
+                    font-size: 0.9rem;
+                    color:$wColor;
+                    span{
+                        color:$mainColor;
+                    }
+                }
+    
+               
+            }
+       
+        }
+    }
+    @include breakpoint_md{
+        .box{
+            @include mdWidth;
+            height: 700px;
+        
+            .subscribe{
+         
+                border:1.5px solid $mainColor;
+                padding: 4.5rem 0;
+          
+    
+                .contentP{
+                    font-size: 1.2rem;
+                   
+                }
+                h4{
+                    @include forH4;
+                    font-size: 1.8rem;
+
+                }
+                h2{
+                    @include forH2;
+                    font-size: 2.5rem;
+                }
+              
+                form{
+                
+                    width: 70%;
+                    height:7dvi;
+                   
+                    border: 1px solid $mainColor;
+                    background-color: $mainColor;
+                    margin:0 auto;
+                    padding: 0;
+                    position: relative;
+                    input{
+                        width:75%;
+                        
+                    }
+                    button{
+                        
+                        position: absolute;
+                        right: 0;
+                        width: 24%;
+                        font-size: 0.9rem;
+                      
+                         
+    
+                    }
+                }
+                .social{
+                    margin:2rem auto;
+                    display: flex;
+                    justify-content: space-between;
+                     
+                    width: 60%;
+    
+    
+                    a{
+                        background-color: $bgColor;
+                        border: 1.5px solid $mainColor;
+                        padding: 1rem;
+                        border-radius: 50%;
+                        color:$mainColor;
+                        font-size: 1.6rem;
+                      i{
+                        @include main_transition;
+                      }
+    
+                      
+                    }
+                    
+                }
+                p{
+                    font-size: 0.9rem;
+                    color:$wColor;
+                    span{
+                        color:$mainColor;
+                    }
+                }
+    
+               
+            }
+       
+        }
+    }
+    @include breakpoint_sm{
+        .box{
+            @include smWidth;
+            height: 700px;
+        
+            .subscribe{
+         
+                border:1.5px solid $mainColor;
+                padding: 4.5rem 0;
+          
+    
+                .contentP{
+                    width: 70%;
+                    font-size: 1.1rem;
+                    margin:0 auto;
+                    font-family: $source;
+                    line-height: 40px;
+                }
+                h4{
+                    @include forH4;
+                    font-size: 1.8rem;
+
+                }
+                h2{
+                    @include forH2;
+                    font-size: 2.5rem;
+                }
+              
+                form{
+                
+                    width: 70%;
+                    height:7dvi;
+                   
+                    border: 1px solid $mainColor;
+                    background-color: $mainColor;
+                    margin:0 auto;
+                    padding: 0;
+                    position: relative;
+                    input{
+                        width:75%;
+                        font-size: 0.8rem;
+                        &::placeholder{
+                            font-size: 0.8rem;
+                        }
+                    }
+                    button{
+                        
+                        position: absolute;
+                        right: 0;
+                        width: 24%;
+                        font-size: 0.7rem;
+                      
+                         
+    
+                    }
+                }
+                .social{
+                    
+                    display: flex;
+                    justify-content: space-between;
+                    width: 55%;
+    
+    
+                    a{
+                        background-color: $bgColor;
+                        border: 1px solid $mainColor;
+                        padding: 0.5rem;
+                        border-radius: 50%;
+                        color:$mainColor;
+                        font-size: 1.3rem;
+                      i{
+                        @include main_transition;
+                      }
+    
+                      
+                    }
+                    
+                }
+                p{
+                    font-size: 0.8rem;
+                    color:$wColor;
+                    width: 85%;
+                    line-height: 30px;
+                    span{
+                        color:$mainColor;
+                    }
+                }
+    
+               
+            }
+       
+        }
+    }
+    @include breakpoint_xsm{
+        .box{
+            @include xsmWidth;
+            height: 600px;
+        
+            .subscribe{
+         
+                border:1.5px solid $mainColor;
+                padding: 4.5rem 0;
+                display:flex; 
+                align-items: center;
+          
+    
+                .contentP{
+                    width: 70%;
+                    font-size: 1.2rem;
+                    margin:0 auto;
+                    font-family: $source;
+                    line-height: 40px;
+                }
+                h4{
+                    @include forH4;
+                    font-size: 1.8rem;
+
+                }
+                h2{
+                    @include forH2;
+                    font-size: 2.5rem;
+                }
+              
+                form{
+                
+                    width: 70%;
+                    height:7dvi;
+                    
+                    border: 1px solid $mainColor;
+                    background-color: $mainColor;
+                    margin:0 auto;
+                    padding: 0;
+                    position: relative;
+                    input{
+                        width:75%;
+                        font-size:.7rem;
+                       &::placeholder{
+                        font-size:.7rem;
+                       }
+                    }
+                    button{
+                        
+                        position: absolute;
+                        right: 0;
+                        width: 24%;
+                        font-size: 0.5rem;
+                      
+                         
+    
+                    }
+                }
+                .social{
+                    margin:1rem auto;
+                    display: flex;
+                    justify-content: space-between;
+                    width: 55%;
+    
+    
+                    a{
+                        background-color: $bgColor;
+                        border: 1px solid $mainColor;
+                        padding: 0.5rem;
+                        border-radius: 50%;
+                        color:$mainColor;
+                        font-size: 1.2rem;
+                      i{
+                        @include main_transition;
+                      }
+    
+                      
+                    }
+                    
+                }
+                p{  
+                    font-size: 0.8rem;
+                    color:$wColor;
+                    line-height: 30px;
+                    width: 80%;
+                    span{
+                        color:$mainColor;
+                    }
+                }
+    
+               
+            }
+       
+        }
+    }
+
+   
+     
+     
+
+}

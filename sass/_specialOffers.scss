@@ -1,0 +1,271 @@
+.special-offers {
+
+    margin:5rem 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+   
+
+    .image {
+        position:absolute;
+        width: 100vw;
+        height: 750px;
+       
+
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+
+        }
+
+
+    }
+
+
+
+
+
+
+    .content_picture {
+         
+        width: 1400px;
+        height: 550px;
+        position: relative;
+        border: 3px solid $mainColor;
+        background-color: $bgColor;
+        display: grid;
+        grid-template-columns: 1.4fr 1fr;
+
+        .contents {
+            display: flex;
+            flex-direction: column;
+            padding: 3.5rem;
+
+            h4 {
+
+                @include forH4;
+
+            }
+
+            h2 {
+                margin: 2rem 0;
+                width: 65%;
+                line-height: 80px;
+                @include forH2;
+            }
+
+            .aa {
+                margin: 2rem 0;
+
+                a {
+                    font-size: 1.5rem;
+                    font-family: $source;
+                    background-color: $bgColor;
+                    color: $mainColor;
+                    padding: 0.8rem 1rem;
+
+                    &.book {
+                        border: 3px solid $mainColor;
+                    }
+
+                    &.book:hover {
+                        background-color: $mainColor;
+                        color: black;
+                        font-weight: $semibold;
+
+                    }
+
+
+                }
+
+            }
+
+
+        }
+
+        .picture {
+            width: 100%;
+            height: 100% !important;
+
+            img {
+
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+        }
+    }
+
+
+
+    @include breakpoint_xxl {
+        height: 1000px;
+
+        .content_picture {
+            @include xxlWidth;
+            height: auto;
+        }
+
+    }
+     @include breakpoint_xl {
+        height: 1000px;
+
+        .content_picture {
+            @include xlWidth;
+            height: auto;
+        }
+
+    }
+
+    @include breakpoint_lg {
+        height: 1080px;
+        display:flex;
+        justify-content: center;
+        align-items: center;
+
+        .image {
+            height: 1080px;
+        }
+
+        .content_picture {
+            @include lgWidth;
+            height: 800px;
+            grid-template-columns: 1fr;
+            grid-template-rows: repeat(1, 1fr);
+
+            .contents {
+                padding: 2rem;
+
+                h2 {
+                    width: 100%;
+                    line-height: 60px;
+                
+                }
+
+                .aa {
+                    margin: 1rem 0;
+
+                    a {
+                        font-size: 1.5rem;
+                        font-family: $source;
+                        background-color: $bgColor;
+                        color: $mainColor;
+                        padding: 0.8rem 1rem;
+
+                        &.book {
+                            border: 3px solid $mainColor;
+                        }
+
+                        &.book:hover {
+                            background-color: $mainColor;
+                            color: black;
+                            font-weight: $semibold;
+
+                        }
+
+
+                    }
+
+                }
+            }
+
+            .picture {
+                width: 100%;
+                height: 100%;
+
+                img {
+
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                }
+            }
+        }
+
+    }
+
+    @include breakpoint_md {
+    
+
+        .image {
+            width: 100%;
+            height: 900px;
+        }
+
+        .content_picture {
+           @include mdWidth;
+            height: 600px; 
+
+            .contents {
+                height: 297px;
+                padding: 2rem;
+
+                h2 {
+                    width: 100%;
+                    line-height: 40px;
+                    font-size: 2.1rem;
+                }
+
+                .aa {
+                    margin: 1rem 0;
+
+                    a {
+                        font-size: 1rem;
+                        font-family: $source;
+                        background-color: $bgColor;
+                        color: $mainColor;
+                        padding: 0.5rem 0.7rem;
+
+                        &.book {
+                            border: 3px solid $mainColor;
+                        }
+
+                        &.book:hover {
+                            background-color: $mainColor;
+                            color: black;
+                            font-weight: $semibold;
+
+                        }
+
+
+                    }
+
+                }
+            }
+
+            .picture {
+                width: 100%;
+                height: 298px;
+
+                img {
+
+                    width: 100%;
+                    height: 298px;
+                    object-fit: cover;
+                }
+            }
+        }
+
+    }
+
+    @include breakpoint_sm {
+         margin:2rem 0;
+        .image{
+            width: 100%;
+        }
+        .content_picture {
+           @include smWidth;
+            
+        }
+    }
+    @include breakpoint_xsm {
+        
+        .content_picture {
+           @include xsmWidth;
+            
+        }
+    }
+
+}

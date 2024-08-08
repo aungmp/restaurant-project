@@ -1,0 +1,119 @@
+@mixin main_transition {
+    transition: 0.3s ease;
+}
+
+@mixin for-menuBoard {
+    width: 65%;
+    border: 3px solid $mainColor;
+    padding: 3rem 4rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+
+}
+
+@mixin for-menuSmallTitle {
+    color: $wColor;
+    font-weight: $regular;
+    font-size: 2rem;
+    font-family: $forum;
+    display: block;
+}
+
+@mixin for-dots {
+    content: "";
+    background-image: radial-gradient(circle, $wColor, transparent 1.5px);
+    background-position: bottom;
+    background-size: 1ex 10px;
+    background-repeat: space no-repeat;
+    height: 0.8cm;
+    flex-grow: 1;
+    order: 2;
+}
+
+@mixin for-menuPrice {
+    color: $mainColor;
+    font-weight: $regular;
+    font-size: 2rem;
+    order: 3;
+}
+
+@mixin for-menuDiscription {
+    padding-top: 1.5rem;
+    color: $mainColor;
+    font-weight: $regular;
+    font-family: $source;
+}
+
+@mixin forH4 {
+
+    text-transform: uppercase;
+    font-family: $source;
+    font-weight: $semibold;
+    color: $mainColor;
+    font-size: calc(1rem + 1vw);
+}
+
+@mixin forH2 {
+    font-size: calc(2.5rem + 1vw);
+    color: $wColor;
+    font-weight: $regular;
+}
+
+@mixin breakpoint_xsm {
+    @media (max-width:470px) {
+        @content;
+    }
+}
+
+@mixin breakpoint_sm {
+    @media(max-width: 576px) {
+        @content;
+    }
+}
+
+@mixin breakpoint_md {
+    @media (max-width:768px) {
+        @content;
+    }
+}
+
+@mixin breakpoint_lg {
+    @media (max-width:992px) {
+        @content;
+    }
+}
+
+@mixin breakpoint_xl {
+    @media (max-width:1200px) {
+        @content;
+    }
+}
+
+@mixin breakpoint_xxl {
+    @media (max-width:1400px) {
+        @content;
+    }
+}
+@mixin regularWidth{
+    width:1350px;
+}
+
+@mixin xxlWidth{
+    width: 1200px;
+}
+@mixin xlWidth{
+    width:992px;
+}
+@mixin lgWidth{
+    width:768px;
+}
+@mixin mdWidth{
+    width: 576px;
+}
+@mixin smWidth{
+    width:90%;
+}
+@mixin xsmWidth{
+    width:95%;
+}  

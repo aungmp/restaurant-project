@@ -1,0 +1,451 @@
+.reservation {
+    height: 900px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin:3rem auto;
+
+    .titles {
+
+        text-align: center;
+
+        h4 {
+            @include forH4;
+            margin-bottom: 2rem;
+        }
+
+        h2 {
+            margin-bottom: 3rem;
+            @include forH2;
+        }
+    }
+
+    .contents {
+        height: 400px;
+        width: 1400px;
+
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 30px;
+
+        .form {
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+
+
+
+            .mb-3 {
+                width: 100%;
+                padding-bottom: 2rem;
+                input {
+                    width: 100%;
+                }
+
+                .form-control {
+                    padding: 1.5rem;
+                    font-size: 1.2rem;
+                    color: $wColor;
+                    font-weight: $regular;
+                    background-color: $bgColor;
+                    border: 1px solid $wColor;
+
+
+                    &:focus {
+                        outline: 0;
+                        border: 1px solid $mainColor;
+
+                    }
+
+                }
+
+
+
+            }
+
+            .my-reservation-sub {
+                display: flex;
+                width: 100%;
+            }
+
+            a {
+                width: 100%;
+
+                button {
+                    width: 100%;
+                    padding: 2rem;
+                    font-size: 1.5rem;
+                    color: $mainColor;
+                    font-weight: $semibold;
+                    border: 4px solid $mainColor;
+                    background-color: $bgColor;
+
+                    &:hover {
+                        background-color: $mainColor;
+                        color: $bgColor;
+                    }
+
+
+                }
+            }
+
+        }
+
+        .map {
+            height: 400px;
+
+
+            iframe {
+                height: 100%;
+                width: 100%;
+            }
+        }
+    }
+
+    @include breakpoint_xxl {
+        height: 800px;
+
+        .contents {
+           @include xxlWidth;
+            height: 350px;
+
+            .form {
+                height: 100%;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+
+
+
+                .mb-3 {
+                    width: 100%;
+
+                    input {
+                        width: 100%;
+                    }
+
+                    .form-control {
+
+                        padding: 1.2rem;
+                        font-size: 1rem;
+                        color: $wColor;
+                        font-weight: $regular;
+                        background-color: $bgColor;
+                        border: 1px solid $wColor;
+
+
+                        &:focus {
+                            outline: 0;
+                            border: 1px solid $mainColor;
+
+                        }
+
+                    }
+
+
+
+                }
+
+                .my-reservation-sub {
+                    display: flex;
+                    width: 100%;
+                }
+
+                a {
+                    width: 100%;
+
+                    button {
+                        width: 100%;
+                        padding: 1.6rem;
+                        font-size: 1.2rem;
+                        color: $mainColor;
+                        font-weight: $semibold;
+                        border: 2.5px solid $mainColor;
+                        background-color: $bgColor;
+
+                        &:hover {
+                            background-color: $mainColor;
+                            color: $bgColor;
+                        }
+
+
+                    }
+                }
+
+            }
+
+            .map {
+                height: 100%;
+
+
+                iframe {
+                    height: 100%;
+                    width: 100%;
+                }
+            }
+        }
+    }
+      @include breakpoint_xl {
+        height: 800px;
+
+        .contents {
+           @include xlWidth;
+            height: 350px;
+
+            .form {
+                height: 100%;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+
+
+
+                .mb-3 {
+                    width: 100%;
+
+                    input {
+                        width: 100%;
+                    }
+
+                    .form-control {
+
+                        padding: 1.2rem;
+                        font-size: 1rem;
+                        color: $wColor;
+                        font-weight: $regular;
+                        background-color: $bgColor;
+                        border: 1px solid $wColor;
+
+
+                        &:focus {
+                            outline: 0;
+                            border: 1px solid $mainColor;
+
+                        }
+
+                    }
+
+
+
+                }
+
+                .my-reservation-sub {
+                    display: flex;
+                    width: 100%;
+                }
+
+                a {
+                    width: 100%;
+
+                    button {
+                        width: 100%;
+                        padding: 1.6rem;
+                        font-size: 1.2rem;
+                        color: $mainColor;
+                        font-weight: $semibold;
+                        border: 2.5px solid $mainColor;
+                        background-color: $bgColor;
+
+                        &:hover {
+                            background-color: $mainColor;
+                            color: $bgColor;
+                        }
+
+
+                    }
+                }
+
+            }
+
+            .map {
+                height: 100%;
+
+
+                iframe {
+                    height: 100%;
+                    width: 100%;
+                }
+            }
+        }
+    }
+
+    @include breakpoint_lg {
+        height: 900px;
+        margin: 5rem 0;
+      
+        .contents {
+          @include lgWidth;
+            height: 550px;
+            display: grid;
+            grid-template-columns: 1fr;
+            grid-template-rows: 1fr 2fr;
+            gap:0;
+
+
+            .form {
+                display: flex;
+                flex-direction: column;
+                justify-content: space-around;
+                grid-area: 2/1/3/2;
+                margin-top: 1rem;
+                .mb-3 {
+                    width: 100%;
+
+
+                    input {
+                        width: 100%;
+
+
+                    }
+
+                    .form-control {
+
+                        padding: 1.5rem;
+                        font-size: 1.2rem;
+                        color: $wColor;
+                        font-weight: $regular;
+                        background-color: $bgColor;
+                        border: 1px solid $wColor;
+
+
+                        &:focus {
+                            outline: 0;
+                            border: 1px solid $mainColor;
+
+                        }
+
+                    }
+
+
+
+                }
+
+                .my-reservation-sub {
+                    display: flex;
+                    width: 100%;
+                }
+
+                a {
+                    margin-top: 1rem;
+                    width: 100%;
+
+                    button {
+                        width: 100%;
+                        padding: 2rem;
+                        font-size: 1.5rem;
+                        color: $mainColor;
+                        font-weight: $semibold;
+                        border: 3px solid $mainColor;
+                        background-color: $bgColor;
+
+                        &:hover {
+                            background-color: $mainColor;
+                            color: $bgColor;
+                        }
+
+
+                    }
+                }
+
+            }
+
+            .map {
+                height: 100%;
+                grid-area: 1/1/2/2;
+             
+
+                iframe {
+                    height: 100%;
+                    width: 100%;
+                }
+            }
+        }
+    }
+
+    @include breakpoint_md {
+        .contents {
+            @include mdWidth;
+            .form{
+                height: 400px;
+
+                .mb-3 {
+                    width: 100%;
+
+
+                    input {
+                        width: 100%;
+
+
+                    }
+
+                    .form-control {
+
+                        padding: 1.2rem;
+                        font-size: 1.2rem;
+                        color: $wColor;
+                        font-weight: $regular;
+                        background-color: $bgColor;
+                        border: 1px solid $wColor;
+
+
+                        &:focus {
+                            outline: 0;
+                            border: 1px solid $mainColor;
+
+                        }
+
+                    }
+
+
+
+                }
+                a {
+                    margin-top:0.5rem;
+                    width: 100%;
+
+                    button {
+                        width: 100%;
+                        padding: 2rem;
+                        font-size: 1.5rem;
+                        color: $mainColor;
+                        font-weight: $semibold;
+                        border: 3px solid $mainColor;
+                        background-color: $bgColor;
+
+                        &:hover {
+                            background-color: $mainColor;
+                            color: $bgColor;
+                        }
+
+
+                    }
+                }
+            }
+
+
+        }
+    }
+
+    @include breakpoint_sm {
+        height: 800px;
+
+        .contents {
+           @include smWidth;
+
+
+
+        }
+    }
+      @include breakpoint_xsm {
+       margin:2rem auto;
+
+        .contents {
+           @include xsmWidth;
+
+
+
+        }
+    }
+}

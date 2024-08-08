@@ -1,0 +1,537 @@
+.menu {
+    width: 100vw !important;
+    height: auto;
+    margin: 5rem auto;
+
+    .container {
+        width: 1400px;
+        margin: 0 auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        
+
+        .title{
+            h4 {
+                margin: 2rem 0;
+                text-align: center;
+                @include forH4;
+    
+    
+            }
+    
+            h2 {
+                margin: 3rem 0;
+                @include forH2;
+            }
+    
+        }
+        .menu_branchs {
+            margin-top: 2rem;
+            min-height: 100px;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 10%;
+            border-top: 2px solid rgb(58, 58, 58);
+            border-bottom: 2px solid rgb(58, 58, 58);
+
+
+            a {
+                font-size: 2rem;
+                color: $wColor;
+                font-weight: $regular;
+
+                &:hover {
+                    color: $mainColor
+                }
+            }
+        }
+
+        .menus-box {
+            margin: 4rem 0;
+            width: 100%;
+            height: 800px;
+            
+
+
+
+            .drink,
+            .appetizer,
+            .mainCourse,
+            .dessert {
+                display: none;
+                gap:1%;
+                width: 100%;
+                height: 100%;
+                
+                 
+
+
+                .picture {
+                    width: 32%;
+                    height: auto;
+                    object-fit: cover;
+
+
+
+                    img {
+                        width: 100%;
+                        height: 100%;
+                        object-fit: cover;
+
+                    }
+                }
+
+                .menu-board {
+                    @include for-menuBoard;
+                    width: 67%;
+                    .single-menu {
+                        display: flex;
+                        color: #fff;
+
+                        .title {
+                            @include for-menuSmallTitle;
+                        }
+
+                        &::after {
+
+                            @include for-dots;
+
+                        }
+
+                        .price {
+                            @include for-menuPrice;
+                        }
+                    }
+
+                    .pSmall {
+                        @include for-menuDiscription;
+                    }
+                }
+            }
+
+            .active {
+                display: flex;
+
+            }
+
+        }
+    }
+
+    @include breakpoint_xxl {
+        .container {
+
+            @include xxlWidth;
+        }
+    }
+      @include breakpoint_xl {
+        .container {
+
+            @include xlWidth;
+        }
+    }
+
+    @include breakpoint_lg{
+
+        .container{
+          @include lgWidth;
+
+            .menus-box {
+                margin: 4rem 0;
+                width: 100%;
+                height: auto;
+                
+    
+    
+    
+                .drink,
+                .appetizer,
+                .mainCourse,
+                .dessert {
+                    display: none;
+                    gap:0;
+                    width: 100%;
+                    height: 100%;
+                    
+                     
+    
+    
+                    .picture {
+                        width: 100%;
+                        height: 1000px;
+                        img {
+                            width: 100%;
+                            height: 100%;
+                            object-fit: cover;
+    
+                        }
+                    }
+    
+                    .menu-board {
+                        @include for-menuBoard;
+                        width: 100%;
+                        height: 800px;
+                        .single-menu {
+                            display: flex;
+                            color: #fff;
+    
+                            .title {
+                                @include for-menuSmallTitle;
+                            }
+    
+                            &::after {
+    
+                                @include for-dots;
+    
+                            }
+    
+                            .price {
+                                @include for-menuPrice;
+                            }
+                        }
+    
+                        .pSmall {
+                            @include for-menuDiscription;
+                        }
+                    }
+                }
+    
+                .active {
+                    display: grid;
+    
+                }
+    
+            }
+            
+        }
+    }
+
+    @include breakpoint_md{
+
+        .container{
+            @include mdWidth;
+
+            .title{
+                h4 {
+                    margin: 2rem 0;
+                    text-align: center;
+                    @include forH4;
+                    font-size: 1.5rem;
+        
+        
+                }
+        
+                h2 {
+                    margin: 2rem 0;
+                    @include forH2;
+                    font-size: 2.5rem;
+                }
+        
+            }
+            .menu_branchs {
+                margin-top: 2rem;
+                min-height: 100px;
+                width: 100%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                gap: 10%;
+                border-top: 2px solid rgb(58, 58, 58);
+                border-bottom: 2px solid rgb(58, 58, 58);
+    
+    
+                a {
+                    font-size: 1rem;
+                    color: $wColor;
+                    font-weight: $regular;
+    
+                    &:hover {
+                        color: $mainColor
+                    }
+                }
+            }
+            .menus-box {
+                margin: 4rem 0;
+                width: 100%;
+                height: auto;
+                
+    
+    
+    
+                .drink,
+                .appetizer,
+                .mainCourse,
+                .dessert {
+                    display: none;
+                    gap:2%;
+                    width: 100%;
+                    height: 100%;
+                    
+                     
+    
+    
+                    .picture {
+                        width: 100%;
+                        height: 800px;
+                        img {
+                            width: 100%;
+                            height: 100%;
+                            object-fit: cover;
+    
+                        }
+                    }
+    
+                    .menu-board {
+                        @include for-menuBoard;
+                        width: 100%;
+                        height: 650px;
+                        padding: 1rem 2rem;
+                        .single-menu {
+                            display: flex;
+                            color: #fff;
+    
+                            .title {
+                                @include for-menuSmallTitle;
+                                font-size: 1.2rem;
+                            }
+    
+                            &::after {
+    
+                                @include for-dots;
+                                height: 0.5cm;
+    
+                            }
+    
+                            .price {
+                                @include for-menuPrice;
+                                font-size: 1.2rem;
+                            }
+                        }
+    
+                        .pSmall {
+                            @include for-menuDiscription;
+                            font-size: 1rem;
+                            padding-top: 1rem;
+
+                        }
+                    }
+                }
+    
+                .active {
+                    display: grid;
+    
+                }
+    
+            }
+        }
+
+    }
+    @include breakpoint_sm{
+
+        .container{
+            @include smWidth;
+
+            .title{
+                h4 {
+                    margin: 2rem 0;
+                    text-align: center;
+                    @include forH4;
+                    font-size: 1.3rem;
+                }
+        
+                h2 {
+                    margin: 2rem 0;
+                    @include forH2;
+                    font-size: 2rem;
+                }
+        
+            }
+            .menu_branchs {
+                margin-top: 2rem;
+                min-height: 100px;
+                width: 100%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                gap: 5%;
+                border-top: 2px solid rgb(58, 58, 58);
+                border-bottom: 2px solid rgb(58, 58, 58);
+    
+    
+                a {
+                    font-size: 1rem;
+                    color: $wColor;
+                    font-weight: $regular;
+    
+                    &:hover {
+                        color: $mainColor
+                    }
+                }
+            }
+            .menus-box {
+                margin: 4rem 0;
+                width: 100%;
+                height: auto;
+                
+    
+    
+    
+                .drink,
+                .appetizer,
+                .mainCourse,
+                .dessert {
+                    display: none;
+                    gap:2%;
+                    width: 100%;
+                    height: 100%;
+                    
+                     
+    
+    
+                    .picture {
+                        width: 100%;
+                        height: 750px;
+                        img {
+                            width: 100%;
+                            height: 100%;
+                            object-fit: cover;
+    
+                        }
+                    }
+    
+                    .menu-board {
+                        @include for-menuBoard;
+                        width: 100%;
+                        height: 600px;
+                        padding: 1rem 2rem;
+                        .single-menu {
+                            display: flex;
+                            color: #fff;
+    
+                            .title {
+                                @include for-menuSmallTitle;
+                                font-size: 1.2rem;
+                            }
+    
+                            &::after {
+    
+                                @include for-dots;
+                                height: 0.5cm;
+    
+                            }
+    
+                            .price {
+                                @include for-menuPrice;
+                                font-size: 1.2rem;
+                            }
+                        }
+    
+                        .pSmall {
+                            @include for-menuDiscription;
+                            font-size: 1rem;
+                            padding-top: 1rem;
+
+                        }
+                    }
+                }
+    
+                .active {
+                    display: grid;
+    
+                }
+    
+            }
+        }
+    }
+
+    @include breakpoint_xsm{
+        .container{
+           @include xsmWidth;
+
+            .menus-box {
+                margin: 4rem 0;
+                width: 100%;
+                height: auto;
+                
+    
+    
+    
+                .drink,
+                .appetizer,
+                .mainCourse,
+                .dessert {
+                    display: none;
+                    gap:2%;
+                    width: 100%;
+                    height: 100%;
+                    
+                     
+    
+    
+                    .picture {
+                        width: 100%;
+                        height: 500px;
+                        img {
+                            width: 100%;
+                            height: 100%;
+                            object-fit: cover;
+    
+                        }
+                    }
+    
+                    .menu-board {
+                        @include for-menuBoard;
+                        width: 100%;
+                        height: 550px;
+                        padding: 1rem 2rem;
+                        .single-menu {
+                            display: flex;
+                            color: #fff;
+    
+                            .title {
+                                @include for-menuSmallTitle;
+                                font-size: 1rem;
+                            }
+    
+                            &::after {
+    
+                                @include for-dots;
+                                height: 0.5cm;
+    
+                            }
+    
+                            .price {
+                                @include for-menuPrice;
+                                font-size: 1rem;
+                            }
+                        }
+    
+                        .pSmall {
+                            @include for-menuDiscription;
+                            font-size: 0.8rem;
+                            padding-top: 0.7rem;
+
+                        }
+                    }
+                }
+    
+                .active {
+                    display: grid;
+    
+                }
+    
+            }
+        }
+    }
+
+
+
+
+    
+
+ 
+ 
+
+}

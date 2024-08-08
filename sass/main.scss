@@ -1,0 +1,23 @@
+@use 'base';
+@import 'variable';
+@import 'mixins';
+@import 'home';
+@import 'about';
+@import 'dish';
+@import 'menu';
+@import 'gallery';
+@import 'specialOffers';
+@import 'reservation';
+@import 'testimonials';
+@import 'event';
+@import 'subscribe';
+
+body{
+    background-color: $bgColor;
+    overflow-x: hidden;
+    
+}
+
+
+ 
+

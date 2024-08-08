@@ -1,0 +1,387 @@
+.event {
+
+    width: 1300px;
+    height: 900px;
+    margin: 3rem auto;
+
+
+
+    .titles {
+        text-align: center;
+        
+
+        h4 {
+            @include forH4;
+            margin: 2rem;
+        }
+
+        h2 {
+            @include forH2;
+            margin-bottom: 4rem;
+
+        }
+
+    }
+
+    .picture {
+        width: 100%;
+        height: 550px;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 20px;
+      
+
+        .pic {
+            position: relative;
+            border: 3px solid $mainColor;
+            height: 550px;
+
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+
+            }
+
+            .date {
+                position: absolute;
+                background-color: $bgColor;
+                top: 10px;
+                margin: 10px;
+                color: $mainColor;
+                font-weight: $regular;
+                font-family: $source;
+                text-transform: uppercase;
+                padding: .5rem;
+
+            }
+
+            .small-title {
+
+                position: relative;
+                bottom: 190px;
+                padding: 2rem;
+
+
+                h4 {
+
+                    font-size: 1.1rem;
+                    font-family: $source;
+                    text-transform: uppercase;
+                    color: $mainColor;
+                    font-weight: $semibold;
+                    padding: 1rem 0;
+
+
+
+                }
+
+                p {
+
+                    color: $wColor;
+                    font-size: 1.7rem;
+                    font-family: $forum;
+                    line-height: 30px;
+
+
+
+
+
+
+                }
+            }
+        }
+
+
+    }
+
+    @include breakpoint_xxl{
+        @include xxlWidth;
+        height: 700px;
+        .picture{
+            height: 480px;
+
+            .pic{
+                height: 480px;
+
+                .date {
+                  
+                    padding: .5rem;
+    
+                }
+    
+                .small-title {
+    
+                
+                    bottom: 140px;
+                    padding: 1.3rem;
+    
+    
+                    h4 {
+    
+                        font-size: 1rem;
+                       
+                        padding: 0.6rem 0;
+    
+    
+    
+                    }
+    
+                    p {
+    
+                        color: $wColor;
+                        font-size: 1.4rem;
+                        font-family: $forum;
+                        line-height: 25px;
+    
+    
+    
+    
+    
+    
+                    }
+                }
+            }
+        }
+        
+    }
+
+
+    @include breakpoint_xl{
+        @include xlWidth;
+        .picture{
+
+            .pic{
+
+                .date {
+                  
+                    padding: .4rem;
+    
+                }
+    
+                .small-title {
+                    bottom: 120px;
+                    padding: 1.3rem;
+    
+    
+                    h4 {
+    
+                        font-size: 0.9rem;
+                        padding: 0.4rem 0;
+                    }
+    
+                    p {
+                        font-size: 1.3rem;
+                        line-height: 25px;
+                    }
+                }
+            }
+        }
+    }
+
+    @include breakpoint_lg{
+        @include lgWidth;
+        height: auto;
+        .picture {
+            width: 100%;
+            height: auto;
+            display: flex;
+            flex-direction: column;
+            gap: 0; 
+          
+    
+            .pic {
+                position: relative;
+                border: 3px solid $mainColor;
+                height: 500px; 
+    
+                img {
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+    
+                }
+    
+                .date {
+                    position: absolute;
+                    background-color: $bgColor;
+                    top: 10px;
+                    margin: 10px;
+                    color: $mainColor;
+                    font-weight: $regular;
+                    font-family: $source;
+                    text-transform: uppercase;
+                    padding: .5rem;
+    
+                }
+    
+                .small-title {
+    
+                    position: relative;
+                    bottom: 130px;
+                    padding: 2rem;
+    
+    
+                    h4 {
+    
+                        font-size: 1.1rem;
+                        font-family: $source;
+                        text-transform: uppercase;
+                        color: $mainColor;
+                        font-weight: $semibold;
+                        padding: 1rem 0;
+    
+    
+    
+                    }
+    
+                    p {
+    
+                        color: $wColor;
+                        font-size: 1.7rem;
+                        font-family: $forum;
+                        line-height: 30px;
+    
+    
+    
+    
+    
+    
+                    }
+                }
+            }
+    
+    
+        }
+
+    }
+    @include breakpoint_md{
+        @include mdWidth;
+
+        .picture {
+            width: 100%;
+            height: auto;
+            display: flex;
+            flex-direction: column;
+            gap: 0; 
+          
+    
+            .pic {
+                position: relative;
+                border: 3px solid $mainColor;
+                height: 550px; 
+    
+                img {
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+    
+                }
+    
+                .date {
+                    position: absolute;
+                    background-color: $bgColor;
+                    top: 10px;
+                    margin: 10px;
+                    color: $mainColor;
+                    font-weight: $regular;
+                    font-family: $source;
+                    text-transform: uppercase;
+                    padding: .5rem;
+    
+                }
+    
+                .small-title {
+    
+                    position: relative;
+                    bottom: 160px;
+                    padding: 1.5rem;
+    
+    
+                    
+                }
+            }
+    
+    
+        }
+    }
+
+    @include breakpoint_sm{
+        @include smWidth;
+    }
+    @include breakpoint_xsm{
+        @include xsmWidth;
+
+        .picture {
+            width: 100%;
+            height: auto;
+            display: flex;
+            flex-direction: column;
+            gap: 0; 
+          
+    
+            .pic {
+                position: relative;
+                border: 3px solid $mainColor;
+                height: 550px; 
+    
+                img {
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+    
+                }
+    
+                .date {
+                    position: absolute;
+                    background-color: $bgColor;
+                    top: 10px;
+                    margin: 10px;
+                    color: $mainColor;
+                    font-weight: $regular;
+                    font-family: $source;
+                    text-transform: uppercase;
+                    padding: .5rem;
+    
+                }
+    
+                .small-title {
+    
+                    position: relative;
+                    bottom: 140px;
+                    padding: 1.5rem;
+    
+                    h4 {
+    
+                        font-size: 1.1rem;
+                        font-family: $source;
+                        text-transform: uppercase;
+                        color: $mainColor;
+                        font-weight: $semibold;
+                        padding: 0.8rem 0;
+    
+    
+    
+                    }
+    
+                    p {
+    
+                        color: $wColor;
+                        font-size: 1.3rem;
+                        font-family: $forum;
+                        line-height: 27px;
+    
+    
+    
+    
+    
+    
+                    }
+                    
+                }
+            }
+    
+    
+        }
+    }
+}
